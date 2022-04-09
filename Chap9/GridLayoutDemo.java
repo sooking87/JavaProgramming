@@ -7,7 +7,7 @@ public class GridLayoutDemo {
     Button zero, one, two, three, four, five, six, seven, eight, nine;
 
     public GridLayoutDemo() {
-        f = new Frame("Tem Color Buttons Frame");
+        f = new Frame("Ten Color Buttons Frame");
         f.setLayout(new GridLayout(1, 10));
 
         zero = new Button("0");
