@@ -23,5 +23,6 @@ public class BorderLayoutDemo {
 
         f.setSize(500, 300);
         f.setVisible(true);
+        //
     }
 }
