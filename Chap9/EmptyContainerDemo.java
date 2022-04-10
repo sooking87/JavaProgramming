@@ -11,5 +11,6 @@ public class EmptyContainerDemo {
 
         f.setSize(400, 200);
         f.setVisible(true);
+        //
     }
 }
