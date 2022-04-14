@@ -26,13 +26,15 @@ public class makeDotwithAwt {
         top.add(exit);
         top.setBackground(Color.lightGray);
 
+        mid.setLayout(null);
         // 중간 패널 만들기
         for (int i = 0; i < 10; i++) {
             label = new Label("*");
-            int x = (int) (Math.random() * 400) + 50;
-            int y = (int) (Math.random() * 400) + 50;
+            int x = (int) (Math.random() * 300) + 50;
+            int y = (int) (Math.random() * 300) + 50;
             System.out.println(x + ", " + y);
             // 6번은 되는데 왜 얘는 랜덤으로 안찍히지,,,,?
+            label.setSize(10, 10);
             label.setLocation(x, y);
             label.setForeground(Color.red);
             mid.add(label);
@@ -50,7 +52,7 @@ public class makeDotwithAwt {
         frame.add(mid, BorderLayout.CENTER);
         frame.add(bottom, BorderLayout.SOUTH);
 
-        frame.setSize(300, 300);
+        frame.setSize(500, 500);
         frame.setVisible(true);
     }
 
