@@ -8,7 +8,7 @@ public class DrawRandomRecByAwt {
 
     public DrawRandomRecByAwt() {
         frame = new Frame("Random Labels");
-        frame.setLayout(null);
+        frame.setLayout(null); // 지정 좌표에 점을 찍을 것이기 때문에 배치관리자를 없애줌
 
         for (int i = 0; i < 20; i++) {
             label = new Label();
