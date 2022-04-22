@@ -7,7 +7,7 @@ import java.awt.*;
 public class MoveMouse {
     private JLabel la = new JLabel("Mouse Event");
     JFrame jf;
-    Container c;
+    Container c; // 얘를 이용하여 윈도우에 컴포넌트를 붙힐 수 있다. awt에서 패널같은 개념?
 
     public MoveMouse() {
         jf = new JFrame("MouseMotionListener");
