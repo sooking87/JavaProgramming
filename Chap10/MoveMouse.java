@@ -13,12 +13,16 @@ public class MoveMouse {
         jf = new JFrame("MouseMotionListener");
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        c = jf.getContentPane();
+        c = jf.getContentPane(); // ?
         c.setLayout(new FlowLayout());
 
         DragMouse listener = new DragMouse();
-        c.addMouseListener(listener); // MouseListener 리스너 등록
-        c.addMouseMotionListener(listener); // MouseMotionListener 리스너 등록
+
+        // 마우스 드래깅 이벤트를 처리하기위해서는 mouse 리스터와 모션 리스너를 둘다 등록해주어야 한다.
+        // MouseListener 리스너 등록
+        c.addMouseListener(listener);
+        // MouseMotionListener 리스너 등록
+        c.addMouseMotionListener(listener);
 
         c.add(la);
         c.setBackground(Color.GREEN);
