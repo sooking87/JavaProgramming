@@ -20,11 +20,10 @@ public class ControlLabelSize {
 
         // 슬라이더 생성
         js = new JSlider(JSlider.HORIZONTAL, 1, 100, 50);
-        js.setPaintLabels(true);
-        js.setPaintTicks(true);
-        js.setPaintTrack(true);
-        js.setMajorTickSpacing(20);
-        js.setMinorTickSpacing(5);
+        js.setPaintLabels(true); // 라벨 보이게
+        js.setPaintTicks(true); // 눈금 보이게
+        js.setMajorTickSpacing(20); // 큰 눈금이 20차이
+        js.setMinorTickSpacing(5); // 작은 눈금이 5차이
         c.add(js, BorderLayout.NORTH);
 
         // 슬라이더에 Change 리스터 등록
@@ -41,10 +40,10 @@ public class ControlLabelSize {
     // Change 리스너 구현
     class ControlSize implements ChangeListener {
         public void stateChanged(ChangeEvent e) {
-            int size = js.getValue();
+            int size = js.getValue(); // 슬라이더에서의 폰트 크기
             System.out.println(size);
 
-            font = jl.getFont();
+            font = jl.getFont(); // 현재 라벨의 폰트 크기
             int fontSize = font.getSize();
 
             if (fontSize >= 1 && fontSize <= 100) {

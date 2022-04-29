@@ -12,7 +12,7 @@ public class LabelEx extends JFrame {
 
         JLabel textLabel = new JLabel("사랑합니다.");
 
-        ImageIcon dog = new ImageIcon("./images.dog.png");
+        ImageIcon dog = new ImageIcon("./images/dog.png");
         JLabel label = new JLabel(dog);
 
         ImageIcon normalIcon = new ImageIcon("./images/dog2.png");
