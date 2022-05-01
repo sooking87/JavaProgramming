@@ -7,10 +7,13 @@ import java.awt.event.*;
 
 public class IndepClassListener extends JFrame {
     public IndepClassListener() {
+        // 컨테이너 설정
         setTitle("Action Event Listener Exam");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
+
+        // 버튼 생성, 컨테이너에 붙히기
         JButton btn = new JButton("Action");
         btn.addActionListener(new MyActionListener()); // 버튼에 actionListener를 달기
         c.add(btn);
