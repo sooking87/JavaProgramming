@@ -11,13 +11,18 @@ public class MouseEventTest extends MouseAdapter {
     JLabel jl;
 
     public MouseEventTest() {
+        // set Container
         jf = new JFrame();
         c = jf.getContentPane();
         c.setLayout(new BorderLayout());
+
+        // set JLabel
         jl = new JLabel("Love Java", JLabel.CENTER);
+        c.add(jl, BorderLayout.NORTH);
+
+        // add MouseLisenter on MouseEventTest Class
         jf.addMouseListener(this);
 
-        c.add(jl, BorderLayout.NORTH);
         jf.setSize(300, 300);
         jf.setVisible(true);
 
