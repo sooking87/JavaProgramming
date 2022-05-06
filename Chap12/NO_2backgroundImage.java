@@ -29,15 +29,18 @@ public class NO_2backgroundImage {
 
             g.drawImage(img, 0, 0, getWidth(), getHeight(), this);
 
+            // MyPanel에 마우스 리스너 등록
+            // MouseAdapter : 필요한 메소드만 오버라이딩 가능
             this.addMouseMotionListener(new MouseAdapter() {
                 public void mouseDragged(MouseEvent e) {
                     x = e.getX();
                     y = e.getY();
-                    repaint();
+                    repaint(); // 컴포넌트의 모양, 텍스트, 크기, 색 등을 변경하는 경우, 변경 사항을 윈도우에 그리기 위해 호출 필요
                 }
             });
             g.setColor(Color.GREEN);
             g.fillOval(x, y, 20, 20);
+            // 원은 마우스가 가리키는 x, y에 그려져야된다.
 
         }
     }
