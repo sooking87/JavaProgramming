@@ -9,20 +9,25 @@ public class MouseDraggedTest extends MouseAdapter {
     Container c;
 
     public MouseDraggedTest() {
-        jf = new JFrame("드래깅동안 YELLOW");
+        // set Container
+        jf = new JFrame("While Dragging set Color with YELLOW");
         c = jf.getContentPane();
+        c.setBackground(Color.GREEN);
+
+        // add MouseListener and MouseMotionListener
         c.addMouseListener(this);
         c.addMouseMotionListener(this);
 
-        c.setBackground(Color.GREEN);
         jf.setSize(300, 200);
         jf.setVisible(true);
     }
 
+    // Calls this Function while dragging
     public void mouseDragged(MouseEvent e) {
         c.setBackground(Color.YELLOW);
     }
 
+    // Calls this Function after Dragging
     public void mouseReleased(MouseEvent e) {
         c.setBackground(Color.GREEN);
     }
