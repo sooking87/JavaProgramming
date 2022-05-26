@@ -1,7 +1,6 @@
 package Chap12;
 
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 
 public class NO_9ControlString {
@@ -30,7 +29,7 @@ public class NO_9ControlString {
             this.setOpaque(true); // 객체에 배경색을 주기 위해 true로 미리 설정을 해놓아야 된다.
             this.setFont(new Font("Arial", Font.PLAIN, 10));
             this.setForeground(Color.WHITE); // 글자색
-            // this.setBackground(Color.BLUE); // 배경색
+            this.setBackground(Color.RED); // 배경색
         }
 
         // 생성자2

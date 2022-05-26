@@ -18,7 +18,6 @@ public class NO_2backgroundImage {
         jf.setVisible(true);
     }
 
-    // 내부 클래스 : MyPanel
     class MyPanel extends JPanel {
         private ImageIcon icon = new ImageIcon("./images/dog4.png");
         private Image img = icon.getImage();
@@ -31,6 +30,7 @@ public class NO_2backgroundImage {
 
             // MyPanel에 마우스 리스너 등록
             // MouseAdapter : 필요한 메소드만 오버라이딩 가능
+            // 익명 클래스 사용 이유? : 이벤트를 통해서 변경되는 값을 Graphics g를 사용하여 윈도우에 그려야되기 때문에 + 간편
             this.addMouseMotionListener(new MouseAdapter() {
                 public void mouseDragged(MouseEvent e) {
                     x = e.getX();

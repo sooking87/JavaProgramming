@@ -29,6 +29,8 @@ public class NO_5ControlImageSize {
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
 
+            // MyPanel에 키 리스너 등록
+            // 익명 클래스 사용 이유? : 이벤트를 통해서 변경되는 값을 Graphics g를 사용하여 윈도우에 그려야되기 때문에
             this.addKeyListener(new KeyAdapter() {
                 public void keyPressed(KeyEvent e) {
                     int keyChar = e.getKeyChar();
@@ -40,7 +42,7 @@ public class NO_5ControlImageSize {
                         width = (int) (width * 0.9);
                         height = (int) (height * 0.9);
                     }
-                    repaint();
+                    repaint(); // 컴포넌트의 모양, 텍스트, 크기, 색 등을 변경하는 경우, 변경 사항을 윈도우에 그리기 위해 호출 필요
                 }
             });
             g.drawImage(img, 10, 10, width, height, this); // 원본 크기로 그리라고 했는데, 원본 크기가 넘 커서 50, 50으로 그렸어요!
